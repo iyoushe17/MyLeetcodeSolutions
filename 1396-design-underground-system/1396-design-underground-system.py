@@ -8,7 +8,6 @@ class UndergroundSystem:
         self.passengers[id].append((stationName, t))
 
     def checkOut(self, id: int, endStation: str, endTime: int) -> None:
-        print(self.passengers[id])
         (startStation, startTime) = self.passengers[id][0]
         del self.passengers[id]
         totalTime = endTime - startTime
